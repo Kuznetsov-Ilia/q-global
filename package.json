@@ -1,13 +1,13 @@
 {
   "name": "q-global",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "notbro.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bro": "rollup -i src/bro.js -f cjs -o dist/bro.js",
     "notbro": "rollup -i src/notbro.js -f cjs -o dist/notbro.js",
-    "start": "npm run bro | npm run notbro"
+    "start": "npm run bro | npm run notbro",
+    "deploy": "git add . && git commit -am 'fix' && git push && npm publish"
   },
   "devDependencies": {
     "rollup": "*"
