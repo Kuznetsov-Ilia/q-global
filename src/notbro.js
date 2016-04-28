@@ -1,33 +1,24 @@
 import { jsdom } from 'jsdom';
-import _process from 'process';
-var _document = jsdom.jsdom('<html><body></body></html>');
-var _window = _document.defaultView;
-var _body = _document.body;
-var _console = {};
-var _navigator = {};
-var _location = {};
-var _html = {};
-export default _window;
+import process from 'process';
+var document = jsdom.jsdom('<html><body></body></html>');
+var window = document.defaultView;
+var body = document.body;
+var navigator = {};
+var location = {};
+var html = {};
+export default window;
 export {
-  _window as window,
-  _body as body,
-  _console as console,
-  _document as document,
-  _navigator as navigator,
-  _location as location,
-  _html as html,
-  _process as process,
-  set
+  window, body, console, document, navigator, location, html, process, set
 };
 
 function set(vals){
   if (vals.window) {
-    _window = vals.window;
+    window = vals.window;
   }
   if (vals.body) {
-    _body = vals.body;
+    body = vals.body;
   }
   if (vals.document) {
-    _document = vals.document;
+    document = vals.document;
   }
 }

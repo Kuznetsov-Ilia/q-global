@@ -3,16 +3,15 @@
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var jsdom = require('jsdom');
-var _process = _interopDefault(require('process'));
+var process = _interopDefault(require('process'));
 
 exports.document = jsdom.jsdom('<html><body></body></html>');
-exports.window = _document.defaultView;
-exports.body = _document.body;
-var _console = {};
-var _navigator = {};
-var _location = {};
-var _html = {};
-var _window$1 = exports.window;
+exports.window = document.defaultView;
+exports.body = document.body;
+var navigator = {};
+var location = {};
+var html = {};
+var window$1 = exports.window;
 function set(vals){
   if (vals.window) {
     exports.window = vals.window;
@@ -25,10 +24,10 @@ function set(vals){
   }
 }
 
-exports['default'] = _window$1;
-exports.console = _console;
-exports.navigator = _navigator;
-exports.location = _location;
-exports.html = _html;
-exports.process = _process;
+exports['default'] = window$1;
+exports.console = console;
+exports.navigator = navigator;
+exports.location = location;
+exports.html = html;
+exports.process = process;
 exports.set = set;
