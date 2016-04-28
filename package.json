@@ -1,6 +1,6 @@
 {
   "name": "my-global",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -8,6 +8,9 @@
     "notbro": "rollup -i src/notbro.js -f cjs -o dist/notbro.js",
     "start": "npm run bro | npm run notbro",
     "deploy": "git add . && git commit -am 'fix' && git push && npm publish"
+  },
+  "dependencies": {
+    "jsdom": "*"
   },
   "devDependencies": {
     "rollup": "*"
