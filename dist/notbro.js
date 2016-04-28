@@ -5,7 +5,8 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var jsdom = require('jsdom');
 var process = _interopDefault(require('process'));
 
-exports.document = jsdom.jsdom('<html><body></body></html>');
+var document = jsdom.jsdom.jsdom('<html><body></body></html>');
+var d = document;
 exports.window = document.defaultView;
 exports.body = document.body;
 var navigator = {};
@@ -20,12 +21,13 @@ function set(vals){
     exports.body = vals.body;
   }
   if (vals.document) {
-    exports.document = vals.document;
+    document = vals.document;
   }
 }
 
 exports['default'] = window$1;
 exports.console = console;
+exports.document = d;
 exports.navigator = navigator;
 exports.location = location;
 exports.html = html;
