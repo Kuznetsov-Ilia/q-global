@@ -1,6 +1,6 @@
-import jsdom from 'jsdom';
+import { jsdom } from 'jsdom';
 import _process from 'process';
-var _document = jsdom('<html><body></body></html>');
+var _document = jsdom.jsdom('<html><body></body></html>');
 var _window = _document.defaultView;
 var _body = _document.body;
 var _console = {};

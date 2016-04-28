@@ -2,10 +2,10 @@
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-var jsdom = _interopDefault(require('jsdom'));
+var jsdom = require('jsdom');
 var _process = _interopDefault(require('process'));
 
-exports.document = jsdom('<html><body></body></html>');
+exports.document = jsdom.jsdom('<html><body></body></html>');
 exports.window = _document.defaultView;
 exports.body = _document.body;
 var _console = {};
