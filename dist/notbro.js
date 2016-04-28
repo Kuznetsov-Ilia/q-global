@@ -5,7 +5,7 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var jsdom = require('jsdom');
 var process = _interopDefault(require('process'));
 
-var document = jsdom.jsdom.jsdom('<html><body></body></html>');
+var document = jsdom.jsdom('<html><body></body></html>');
 var d = document;
 exports.window = document.defaultView;
 exports.body = document.body;
