@@ -1,11 +1,11 @@
 {
   "name": "my-global",
-  "version": "1.0.7",
+  "version": "2.0.7",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bro": "rollup -i src/bro.js -f cjs -o dist/bro.js",
-    "notbro": "rollup -i src/notbro.js -f cjs -o dist/notbro.js",
+    "bro": "rollup -i bro.js -f cjs -o bro.js",
+    "notbro": "rollup -i notbro.js -f cjs -o notbro.js",
     "start": "npm run bro | npm run notbro",
     "deploy": "git add . && git commit -am 'fix' && git push && npm publish"
   },
