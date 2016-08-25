@@ -1,6 +1,6 @@
 {
   "name": "my-global",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,10 +19,10 @@
     "type": "git",
     "url": "git+https://github.com/QiV/q-global.git"
   },
-  "files": [ "dist", "src" ],
-  "main": "dist/notbro.js",
-  "jsnext:main": "src/bro.js",
-  "browser": "dist/bro.js",
+  "files": [ "bro.js", "bro.es", "notbro.js", "notbro.es" ],
+  "main": "notbro.js",
+  "jsnext:main": "bro.es",
+  "browser": "bro.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
